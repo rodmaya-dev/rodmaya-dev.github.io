@@ -1,0 +1,49 @@
+[
+ {
+  "name": "around_the_us — full stack",
+  "desc": "React + Vite client and Express/MongoDB API with JWT authentication, protected routes and password hashing; deployed on Vercel with MongoDB Atlas.",
+  "tech": "React · TypeScript · Node · MongoDB",
+  "tags": [
+   "fullstack"
+  ],
+  "demo": "https://web-project-around-client.vercel.app/",
+  "code": "https://github.com/rodmaya-dev/web_project_around_full"
+ },
+ {
+  "name": "final_project",
+  "desc": "Capstone full stack project of the TripleTen program. Details and repository coming soon.",
+  "tech": "Sprint 17",
+  "tags": [
+   "fullstack"
+  ],
+  "status": "in progress"
+ },
+ {
+  "name": "azulpeninsula",
+  "desc": "Bilingual (ES/EN) website for a residential community: apartment listings, advisors and contact pages.",
+  "tech": "Next.js · Vercel",
+  "tags": [
+   "frontend"
+  ],
+  "code": "https://github.com/rodmaya-dev/azulpeninsula",
+  "demo": "https://azulpeninsula.vercel.app/"
+ },
+ {
+  "name": "web_project_expenses_es",
+  "desc": "JavaScript project applying DOM manipulation and event handling.",
+  "tech": "JavaScript",
+  "tags": [
+   "frontend"
+  ],
+  "code": "https://github.com/rodmaya-dev/web_project_expenses_es"
+ },
+ {
+  "name": "web_project_coffeeshop_es",
+  "desc": "Responsive layout project focused on semantic HTML and CSS design.",
+  "tech": "HTML · CSS",
+  "tags": [
+   "frontend"
+  ],
+  "code": "https://github.com/rodmaya-dev/web_project_coffeeshop_es"
+ }
+]

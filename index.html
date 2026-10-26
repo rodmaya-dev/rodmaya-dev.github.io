@@ -3,346 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rod Maya — Database Developer &amp; Full Stack Web Developer</title>
-<meta name="description" content="Rodrigo (Rod) Maya — IT Support Engineer & Database Developer with 10+ years enterprise experience, transitioning into full stack web development.">
+<title>Rod Maya — IT Support Engineer · Data Analyst (Oracle, PL/SQL) · Full Stack in training</title>
+<meta name="description" content="Rod Maya — IT Support Engineer with 10+ years in enterprise SQL (Oracle PL/SQL, T-SQL), data integration and L2 support. Finishing a full stack program and preparing for AWS Certified Data Engineer – Associate. Remote, GMT-6.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="canonical" href="https://rodmaya-dev.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D1B2A'/%3E%3Ctext x='16' y='22' font-size='16' font-family='monospace' font-weight='700' text-anchor='middle' fill='%23E8A93B'%3ERM%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://rodmaya-dev.github.io/assets/og-image.png">
+<meta property="og:title" content="Rod Maya — SQL, Data Integration &amp; Full Stack">
+<meta property="og:description" content="10+ years of enterprise SQL and L2 support. Now building full stack apps and preparing for AWS Data Engineer – Associate.">
+<meta property="og:url" content="https://rodmaya-dev.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Rodrigo Maya","alternateName":"Rod Maya","jobTitle":"Data Engineer (Oracle, PL/SQL) | IT Support Engineer","url":"https://rodmaya-dev.github.io/","sameAs":["https://linkedin.com/in/rod-maya","https://github.com/rodmaya-dev"],"knowsAbout":["Oracle PL/SQL","SQL Server","Data integration","React","Node.js","AWS"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0D1B2A;
-    --panel:#132436;
-    --panel-2:#0F2032;
-    --border:#24374F;
-    --text:#E7ECF3;
-    --text-muted:#8FA0B5;
-    --amber:#E8A93B;
-    --teal:#56D6C4;
-    --teal-dim:rgba(86,214,196,0.12);
-    --amber-dim:rgba(232,169,59,0.12);
-    --radius:6px;
-    --mono:'IBM Plex Mono', monospace;
-    --sans:'IBM Plex Sans', sans-serif;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
-  }
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:var(--sans);
-    line-height:1.6;
-  }
-  a{color:var(--teal);}
-  ::selection{background:var(--teal-dim); color:var(--teal);}
-
-  /* ---------- Layout shell ---------- */
-  .shell{
-    display:grid;
-    grid-template-columns:260px 1fr;
-    min-height:100vh;
-  }
-  @media (max-width:900px){
-    .shell{grid-template-columns:1fr;}
-  }
-
-  /* ---------- Schema rail (nav) ---------- */
-  .rail{
-    background:var(--panel-2);
-    border-right:1px solid var(--border);
-    padding:28px 20px;
-    position:sticky;
-    top:0;
-    height:100vh;
-    overflow-y:auto;
-  }
-  @media (max-width:900px){
-    .rail{
-      position:relative;
-      height:auto;
-      border-right:none;
-      border-bottom:1px solid var(--border);
-      padding:20px 20px 12px;
-    }
-  }
-  .rail-brand{
-    font-family:var(--mono);
-    font-size:0.95rem;
-    font-weight:600;
-    color:var(--text);
-    margin-bottom:2px;
-  }
-  .rail-brand .db-icon{color:var(--amber); margin-right:6px;}
-  .rail-sub{
-    font-family:var(--mono);
-    font-size:0.72rem;
-    color:var(--text-muted);
-    margin-bottom:24px;
-  }
-  .schema-label{
-    font-family:var(--mono);
-    font-size:0.68rem;
-    letter-spacing:0.12em;
-    color:var(--text-muted);
-    text-transform:uppercase;
-    margin:0 0 8px 2px;
-  }
-  .table-tree{list-style:none; margin:0 0 20px; padding:0;}
-  .table-tree li{margin-bottom:2px;}
-  .table-tree a{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-family:var(--mono);
-    font-size:0.85rem;
-    color:var(--text-muted);
-    text-decoration:none;
-    padding:7px 10px;
-    border-radius:var(--radius);
-    transition:background 0.15s, color 0.15s;
-  }
-  .table-tree a:hover, .table-tree a:focus-visible{
-    background:var(--teal-dim);
-    color:var(--teal);
-    outline:none;
-  }
-  .table-tree a:focus-visible{ box-shadow:0 0 0 2px var(--teal); }
-  .table-tree .tbl-icon{
-    color:var(--amber);
-    font-size:0.8rem;
-  }
-  .row-count{
-    margin-left:auto;
-    font-size:0.68rem;
-    color:var(--text-muted);
-    opacity:0.7;
-  }
-  .rail-contact{
-    border-top:1px solid var(--border);
-    padding-top:16px;
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-  }
-  .rail-contact a{
-    font-family:var(--mono);
-    font-size:0.78rem;
-    color:var(--text-muted);
-    text-decoration:none;
-  }
-  .rail-contact a:hover{color:var(--teal);}
-
-  /* ---------- Main content ---------- */
-  main{padding:56px 48px 80px; max-width:920px;}
-  @media (max-width:600px){ main{padding:36px 20px 60px;} }
-
-  section{margin-bottom:88px; scroll-margin-top:24px;}
-
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:0.75rem;
-    color:var(--amber);
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-    margin:0 0 10px;
-  }
-  h1,h2,h3{font-family:var(--mono); font-weight:600; margin:0;}
-  h2{font-size:1.5rem; margin-bottom:20px; color:var(--text);}
-  p{color:var(--text-muted); max-width:64ch;}
-
-  /* ---------- Hero / query console ---------- */
-  .console{
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:8px;
-    overflow:hidden;
-    margin-bottom:20px;
-  }
-  .console-bar{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    padding:10px 14px;
-    background:var(--panel-2);
-    border-bottom:1px solid var(--border);
-  }
-  .dot{width:10px; height:10px; border-radius:50%;}
-  .dot.r{background:#E5625A;}
-  .dot.y{background:#E8B93B;}
-  .dot.g{background:#56C46A;}
-  .console-title{
-    font-family:var(--mono);
-    font-size:0.72rem;
-    color:var(--text-muted);
-    margin-left:8px;
-  }
-  .console-body{
-    padding:24px 26px 28px;
-    font-family:var(--mono);
-    font-size:1rem;
-  }
-  @media (max-width:600px){ .console-body{font-size:0.85rem; padding:18px;} }
-  .kw{color:var(--amber);}
-  .str{color:var(--teal);}
-  .cmt{color:var(--text-muted);}
-  #typed-query{white-space:pre-wrap;}
-  .cursor{
-    display:inline-block;
-    width:8px; height:1.1em;
-    background:var(--teal);
-    vertical-align:text-bottom;
-    animation:blink 1s steps(1) infinite;
-  }
-  @keyframes blink{ 50%{opacity:0;} }
-  .result{
-    margin-top:18px;
-    padding-top:16px;
-    border-top:1px dashed var(--border);
-    opacity:0;
-    transition:opacity 0.6s ease;
-  }
-  .result.show{opacity:1;}
-  .result-row{
-    font-family:var(--sans);
-    font-size:1.15rem;
-    color:var(--text);
-    font-weight:500;
-  }
-  .result-meta{
-    font-family:var(--mono);
-    font-size:0.78rem;
-    color:var(--text-muted);
-    margin-top:6px;
-  }
-
-  .hero-tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;}
-  .tag{
-    font-family:var(--mono);
-    font-size:0.72rem;
-    color:var(--amber);
-    background:var(--amber-dim);
-    border:1px solid rgba(232,169,59,0.3);
-    padding:4px 10px;
-    border-radius:100px;
-  }
-
-  /* ---------- Experience rows ---------- */
-  .xp-row{
-    display:grid;
-    grid-template-columns:140px 1fr;
-    gap:20px;
-    padding:20px 0;
-    border-bottom:1px solid var(--border);
-  }
-  .xp-row:first-of-type{border-top:1px solid var(--border);}
-  @media (max-width:640px){
-    .xp-row{grid-template-columns:1fr; gap:6px;}
-  }
-  .xp-period{
-    font-family:var(--mono);
-    font-size:0.78rem;
-    color:var(--text-muted);
-    white-space:nowrap;
-  }
-  .xp-role{font-family:var(--sans); font-weight:600; color:var(--text); margin:0 0 4px;}
-  .xp-client{color:var(--teal); font-family:var(--mono); font-size:0.85rem; margin-bottom:8px; display:block;}
-  .xp-desc{color:var(--text-muted); font-size:0.95rem; margin:0;}
-
-  /* ---------- Skills as tables ---------- */
-  .schema-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
-    gap:16px;
-  }
-  .schema-card{
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:8px;
-    overflow:hidden;
-  }
-  .schema-card-head{
-    font-family:var(--mono);
-    font-size:0.78rem;
-    color:var(--amber);
-    padding:10px 14px;
-    background:var(--panel-2);
-    border-bottom:1px solid var(--border);
-  }
-  .schema-card ul{list-style:none; margin:0; padding:10px 14px;}
-  .schema-card li{
-    font-family:var(--mono);
-    font-size:0.82rem;
-    color:var(--text-muted);
-    padding:6px 0;
-    border-bottom:1px dashed var(--border);
-    display:flex; justify-content:space-between; gap:10px;
-  }
-  .schema-card li:last-child{border-bottom:none;}
-  .schema-card li span.type{color:var(--teal); font-size:0.72rem;}
-
-  /* ---------- Projects ---------- */
-  .proj-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px;}
-  .proj-card{
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:8px;
-    padding:18px 20px;
-    text-decoration:none;
-    display:block;
-    transition:border-color 0.15s, transform 0.15s;
-  }
-  .proj-card:hover, .proj-card:focus-visible{
-    border-color:var(--teal);
-    transform:translateY(-2px);
-    outline:none;
-  }
-  .proj-name{font-family:var(--mono); color:var(--text); font-weight:600; font-size:0.95rem;}
-  .proj-desc{color:var(--text-muted); font-size:0.85rem; margin-top:6px;}
-  .proj-tag{
-    display:inline-block;
-    margin-top:12px;
-    font-family:var(--mono);
-    font-size:0.7rem;
-    color:var(--teal);
-  }
-
-  /* ---------- Certifications ---------- */
-  .cert-list{list-style:none; margin:0; padding:0;}
-  .cert-list li{
-    display:flex;
-    justify-content:space-between;
-    gap:16px;
-    padding:14px 0;
-    border-bottom:1px solid var(--border);
-    font-family:var(--mono);
-    font-size:0.85rem;
-  }
-  .cert-list li:first-child{border-top:1px solid var(--border);}
-  .cert-name{color:var(--text);}
-  .cert-date{color:var(--text-muted); white-space:nowrap;}
-
-  /* ---------- Contact ---------- */
-  .contact-console .console-body{display:flex; flex-direction:column; gap:10px;}
-  .contact-line{display:flex; gap:10px; align-items:baseline;}
-  .contact-line .k{color:var(--amber);}
-  .contact-line a{color:var(--text); text-decoration:none;}
-  .contact-line a:hover{color:var(--teal);}
-
-  footer{
-    font-family:var(--mono);
-    font-size:0.72rem;
-    color:var(--text-muted);
-    text-align:left;
-    padding-top:20px;
-    border-top:1px solid var(--border);
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#about">Skip to content</a>
 
 <div class="shell">
   <nav class="rail" aria-label="Section navigation">
@@ -354,8 +33,8 @@
       <li><a href="#about"><span class="tbl-icon">▤</span>about<span class="row-count">1 row</span></a></li>
       <li><a href="#experience"><span class="tbl-icon">▤</span>experience<span class="row-count">2 rows</span></a></li>
       <li><a href="#skills"><span class="tbl-icon">▤</span>skills<span class="row-count">3 sets</span></a></li>
-      <li><a href="#projects"><span class="tbl-icon">▤</span>projects<span class="row-count">3 rows</span></a></li>
-      <li><a href="#certifications"><span class="tbl-icon">▤</span>certifications<span class="row-count">3 rows</span></a></li>
+      <li><a href="#projects"><span class="tbl-icon">▤</span>projects<span class="row-count">5 rows</span></a></li>
+      <li><a href="#certifications"><span class="tbl-icon">▤</span>certifications<span class="row-count">6 rows</span></a></li>
       <li><a href="#contact"><span class="tbl-icon">▤</span>contact<span class="row-count">1 row</span></a></li>
     </ul>
 
@@ -370,7 +49,7 @@
 
     <!-- HERO -->
     <section id="about" aria-label="About">
-      <p class="eyebrow">// database_developer.ts</p>
+      <p class="eyebrow">// rod_maya.ts</p>
       <div class="console">
         <div class="console-bar">
           <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
@@ -379,115 +58,43 @@
         <div class="console-body">
 <span id="typed-query"></span><span class="cursor" id="cursor"></span>
           <div class="result" id="result">
-            <div class="result-row">Rodrigo "Rod" Maya — IT Support Engineer &amp; Database Developer, building toward Full Stack Web Development.</div>
-            <div class="result-meta">10+ yrs enterprise experience · Puerto Vallarta, MX (GMT-6) · Remote-first</div>
+            <div class="result-row" id="p-headline"></div>
+            <div class="result-meta" id="p-meta"></div>
           </div>
         </div>
       </div>
-      <p>Over a decade supporting mission-critical, 24/7 enterprise systems on Oracle PL/SQL and Microsoft SQL Server — for global brands and multi-industry consulting clients. Currently adding TypeScript, React and Node.js to that foundation through a full stack web development program.</p>
-      <div class="hero-tags">
-        <span class="tag">Oracle PL/SQL</span>
-        <span class="tag">SQL Server T-SQL</span>
-        <span class="tag">SAP–Oracle Integration</span>
-        <span class="tag">ITIL / L2 Support</span>
-        <span class="tag">Azure Fundamentals</span>
-        <span class="tag">TypeScript (in progress)</span>
-      </div>
+      <p id="p-intro"></p>
+      <div class="hero-tags" id="p-tags"></div>
+      <div class="status"><i></i><span id="p-status"></span></div>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience" aria-label="Experience">
       <p class="eyebrow">// experience</p>
       <h2>experience</h2>
-
-      <div class="xp-row">
-        <div class="xp-period">2021 — 2025</div>
-        <div>
-          <p class="xp-role">Support Engineer</p>
-          <span class="xp-client">IBM — Client: Nestlé / Nespresso</span>
-          <p class="xp-desc">Level 2 application support in a global 24/7 environment. Daily hands-on work in Oracle PL/SQL for Nespresso's Supply Chain systems — resolving production incidents involving data inconsistencies, purchase orders and logistics flows, with root cause analysis at the database level across international teams.</p>
-        </div>
-      </div>
-
-      <div class="xp-row">
-        <div class="xp-period">2013 — 2021</div>
-        <div>
-          <p class="xp-role">Developer Analyst</p>
-          <span class="xp-client">Condor Consulting — Aeroméxico · Grupo Vidanta · Alsea</span>
-          <p class="xp-desc">Database design and development in Oracle PL/SQL and SQL Server T-SQL for enterprise ERP and BI systems. Built and optimized stored procedures and complex queries, led a SAP–Oracle data validation project for Aeroméxico, developed OBIEE/BI Publisher reporting for Vidanta, and supported an Oracle EBS R11→R12 migration for Alsea.</p>
-        </div>
-      </div>
+      <div id="xp-list"></div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills" aria-label="Skills">
       <p class="eyebrow">// skills</p>
       <h2>skills</h2>
-      <div class="schema-grid">
-        <div class="schema-card">
-          <div class="schema-card-head">databases_enterprise</div>
-          <ul>
-            <li>Oracle PL/SQL <span class="type">expert</span></li>
-            <li>SQL Server T-SQL <span class="type">expert</span></li>
-            <li>SAP–Oracle integration <span class="type">strong</span></li>
-            <li>OBIEE / BI Publisher <span class="type">strong</span></li>
-            <li>ITIL / L2 support <span class="type">expert</span></li>
-          </ul>
-        </div>
-        <div class="schema-card">
-          <div class="schema-card-head">web_development</div>
-          <ul>
-            <li>HTML5 / CSS3 <span class="type">solid</span></li>
-            <li>JavaScript (DOM, ES6) <span class="type">solid</span></li>
-            <li>TypeScript / OOP <span class="type">learning</span></li>
-            <li>React / Node.js <span class="type">upcoming</span></li>
-            <li>Figma <span class="type">solid</span></li>
-          </ul>
-        </div>
-        <div class="schema-card">
-          <div class="schema-card-head">tools_cloud</div>
-          <ul>
-            <li>Git / GitHub <span class="type">solid</span></li>
-            <li>Microsoft Azure Fundamentals <span class="type">certified</span></li>
-            <li>Linux CLI <span class="type">basic</span></li>
-            <li>Python <span class="type">basic</span></li>
-          </ul>
-        </div>
-      </div>
+      <div class="schema-grid" id="skills-grid"></div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" aria-label="Projects">
       <p class="eyebrow">// projects</p>
       <h2>projects</h2>
-      <div class="proj-grid">
-        <a class="proj-card" href="https://github.com/rodmaya-dev/azulpeninsula" target="_blank" rel="noopener">
-          <div class="proj-name">azulpeninsula</div>
-          <div class="proj-desc">Static HTML/CSS site project built during full stack training.</div>
-          <span class="proj-tag">HTML</span>
-        </a>
-        <a class="proj-card" href="https://github.com/rodmaya-dev/web_project_expenses_es" target="_blank" rel="noopener">
-          <div class="proj-name">web_project_expenses_es</div>
-          <div class="proj-desc">JavaScript project applying DOM manipulation and event handling.</div>
-          <span class="proj-tag">JavaScript</span>
-        </a>
-        <a class="proj-card" href="https://github.com/rodmaya-dev/web_project_coffeeshop_es" target="_blank" rel="noopener">
-          <div class="proj-name">web_project_coffeeshop_es</div>
-          <div class="proj-desc">Responsive layout project focused on semantic HTML and CSS design.</div>
-          <span class="proj-tag">HTML</span>
-        </a>
-      </div>
+      <div id="filters" class="hero-tags" role="group" aria-label="Filter projects"></div>
+      <div class="proj-grid" id="projects-grid"></div>
     </section>
 
     <!-- CERTIFICATIONS -->
     <section id="certifications" aria-label="Certifications">
       <p class="eyebrow">// certifications</p>
       <h2>certifications</h2>
-      <ul class="cert-list">
-        <li><span class="cert-name">Microsoft Azure Fundamentals (AZ-900)</span><span class="cert-date">Dec 2022</span></li>
-        <li><span class="cert-name">ITIL Foundation — IT Service Management</span><span class="cert-date">—</span></li>
-        <li><span class="cert-name">Full Stack Web Development — TripleTen</span><span class="cert-date">In progress · 2026</span></li>
-      </ul>
+      <ul class="cert-list" id="cert-list"></ul>
     </section>
 
     <!-- CONTACT -->
@@ -503,7 +110,13 @@
           <div class="contact-line"><span class="k">email</span><a href="mailto:rodrigomaya000@gmail.com">rodrigomaya000@gmail.com</a></div>
           <div class="contact-line"><span class="k">linkedin</span><a href="https://linkedin.com/in/rod-maya" target="_blank" rel="noopener">linkedin.com/in/rod-maya</a></div>
           <div class="contact-line"><span class="k">github</span><a href="https://github.com/rodmaya-dev" target="_blank" rel="noopener">github.com/rodmaya-dev</a></div>
-          <div class="contact-line"><span class="k">location</span><span>Puerto Vallarta, MX (GMT-6) — open to 100% remote</span></div>
+          <div class="contact-line"><span class="k">location</span><span>Mexico (GMT-6) — open to 100% remote</span></div>
+          <div class="contact-line"><span class="k">local_time</span><span id="clock">—</span></div>
+          <div class="actions">
+            <button class="btn" id="copy" type="button">Copy email</button>
+            <a class="btn wa" href="https://wa.me/523223817651?text=Hi%20Rod%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" aria-label="Contact Rod on WhatsApp">WhatsApp</a>
+            <a class="btn ghost" id="cv" href="assets/Rod_Maya_CV.pdf" download hidden>Download CV (PDF)</a>
+          </div>
         </div>
       </div>
     </section>
@@ -512,57 +125,9 @@
   </main>
 </div>
 
-<script>
-(function(){
-  var query = [
-    {t:'kw', text:'SELECT '}, {t:'', text:'career_path\n'},
-    {t:'kw', text:'FROM '}, {t:'', text:'enterprise_systems\n'},
-    {t:'kw', text:'WHERE '}, {t:'', text:'experience '}, {t:'kw', text:'>= '}, {t:'str', text:"'10 years'"}, {t:'', text:'\n'},
-    {t:'kw', text:'  AND '}, {t:'', text:'destination '}, {t:'kw', text:'= '}, {t:'str', text:"'full_stack_web_dev'"}, {t:'', text:';'}
-  ];
-  var target = document.getElementById('typed-query');
-  var cursor = document.getElementById('cursor');
-  var result = document.getElementById('result');
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if(reduced){
-    var html = '';
-    query.forEach(function(seg){
-      if(seg.t) html += '<span class="'+seg.t+'">'+seg.text+'</span>';
-      else html += seg.text;
-    });
-    target.innerHTML = html;
-    result.classList.add('show');
-    cursor.style.display='none';
-    return;
-  }
 
-  var flat = [];
-  query.forEach(function(seg){
-    for(var i=0;i<seg.text.length;i++){ flat.push({ch:seg.text[i], cls:seg.t}); }
-  });
 
-  var i = 0;
-  var buffer = '';
-  var currentCls = '';
-  function step(){
-    if(i >= flat.length){
-      setTimeout(function(){ result.classList.add('show'); }, 300);
-      return;
-    }
-    var c = flat[i];
-    if(c.cls !== currentCls){
-      buffer += (currentCls ? '</span>' : '') + (c.cls ? '<span class="'+c.cls+'">' : '');
-      currentCls = c.cls;
-    }
-    buffer += (c.ch === '\n' ? '<br>' : c.ch);
-    target.innerHTML = buffer + (currentCls ? '</span>' : '');
-    i++;
-    setTimeout(step, 22);
-  }
-  step();
-})();
-</script>
-
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

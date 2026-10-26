@@ -1,0 +1,81 @@
+[
+ {
+  "title": "databases_enterprise",
+  "items": [
+   [
+    "Oracle PL/SQL",
+    "professional"
+   ],
+   [
+    "SQL Server T-SQL",
+    "professional"
+   ],
+   [
+    "SAP–Oracle integration",
+    "project work"
+   ],
+   [
+    "OBIEE / BI Publisher",
+    "project work"
+   ],
+   [
+    "ITIL / L2 support",
+    "professional"
+   ]
+  ]
+ },
+ {
+  "title": "web_development",
+  "items": [
+   [
+    "HTML5 / CSS3",
+    "solid"
+   ],
+   [
+    "JavaScript (DOM, ES6)",
+    "solid"
+   ],
+   [
+    "TypeScript / OOP",
+    "solid"
+   ],
+   [
+    "React / Node.js / Express",
+    "bootcamp"
+   ],
+   [
+    "MongoDB · REST · JWT auth",
+    "bootcamp"
+   ],
+   [
+    "Figma (design specs)",
+    "solid"
+   ]
+  ]
+ },
+ {
+  "title": "tools_cloud",
+  "items": [
+   [
+    "Git / GitHub",
+    "solid"
+   ],
+   [
+    "Microsoft Azure Fundamentals",
+    "certified"
+   ],
+   [
+    "AWS (data engineering path)",
+    "in training"
+   ],
+   [
+    "Vercel · MongoDB Atlas",
+    "deployed"
+   ],
+   [
+    "Python",
+    "basic"
+   ]
+  ]
+ }
+]

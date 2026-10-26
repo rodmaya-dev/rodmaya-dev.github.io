@@ -1,0 +1,31 @@
+{
+ "about": {
+  "headline": "Rodrigo Maya — IT Support Engineer & Data Analyst (Oracle, PL/SQL) — now building full stack apps and preparing for AWS Data Engineer.",
+  "meta": "10+ yrs enterprise experience · Mexico (GMT-6) · Remote-first",
+  "intro": "Over a decade supporting mission-critical, 24/7 enterprise systems on Oracle PL/SQL and Microsoft SQL Server — for global brands and multi-industry consulting clients. I am finishing the final project of a full stack program (TypeScript, React, Node.js, MongoDB) and preparing for the AWS Certified Data Engineer – Associate exam.",
+  "tags": [
+   "Oracle PL/SQL",
+   "SQL Server T-SQL",
+   "SAP–Oracle Integration",
+   "ITIL / L2 Support",
+   "Azure Fundamentals",
+   "React · Node.js · MongoDB",
+   "AWS Data Engineer – Associate (preparing)"
+  ],
+  "status": "Open to remote roles · support, SQL/data, full stack"
+ },
+ "experience": [
+  {
+   "period": "2021 — 2025",
+   "role": "Support Engineer",
+   "client": "IBM — Client: Nestlé / Nespresso",
+   "desc": "Level 2 support of Nespresso's Supply Chain systems in a global 24/7 follow-the-sun operation (India, Romania, Mexico). Analyzed incidents through PL/SQL code and daily SQL queries, traced rejected purchase orders across Nesoft, Nesoa and SAP payloads — cutting resolution from typically 2–3 days to a few hours — and escalated documented findings to L3."
+  },
+  {
+   "period": "2013 — 2021",
+   "role": "Developer Analyst",
+   "client": "Condor Consulting — Aeroméxico · Grupo Vidanta · Alsea",
+   "desc": "Developed Oracle PL/SQL and SQL Server T-SQL stored procedures, data-load interfaces and customizations for ERP and BI projects. Contributed to a SAP–Oracle integration for Aeroméxico (control tables, import/load/export processes), delivered OBIEE/BI Publisher reports for Grupo Vidanta, and remediated programs for Alsea's Oracle-led EBS R11→R12 migration."
+  }
+ ]
+}
